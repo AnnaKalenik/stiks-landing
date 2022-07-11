@@ -1,9 +1,10 @@
-//Фиксация и анимация меню
+/*
+* ФИКСАЦИЯ И АНИМАЦИЯ МЕНЮ
+*/
 document.onscroll = function () {
-    let head = document.querySelector('.head');
-    let headHight = head.offsetHeight;
-
-    let scroll = window.scrollY;
+    const head = document.querySelector('.head');
+    const headHight = head.offsetHeight;
+    const scroll = window.scrollY;
 
     if (scroll > headHight) {
         head.classList.add('head__fixed');
@@ -14,10 +15,14 @@ document.onscroll = function () {
     }
 };
 
-//Меню-бургер
+/*
+* МЕНЮ-БУРГЕР
+*/
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
+const menuLinks = document.querySelectorAll('.menu__link');
 
+//Открытие меню при нажатии на иконку
 if (iconMenu) {
     iconMenu.addEventListener("click", function(e) {
         document.body.classList.toggle('body_lock');
@@ -27,8 +32,6 @@ if (iconMenu) {
 }
 
 //Функция закрытия меню-бургер после клика по пункту меню
-const menuLinks = document.querySelectorAll('.menu__link');
-
 if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
         menuLink.addEventListener("click", onMenuLinkClick);
@@ -43,16 +46,18 @@ if (menuLinks.length > 0) {
     }
 }
 
-//Подключение Яндекс-карты
+/*
+* ПОДКЛЮЧЕНИЕ ЯНДЕКС-КАРТ
+*/
 function initMap() {
-    let center = [53.43695695208052,28.543546389549256];
+    const center = [53.43695695208052,28.543546389549256];
 
-    let map = new ymaps.Map("map", {
+    const map = new ymaps.Map("map", {
         center: center,
         zoom: 16
     });
 
-    let placemark = new ymaps.Placemark(center, {}, {});
+    const placemark = new ymaps.Placemark(center, {}, {});
 
     map.geoObjects.add(placemark);
 }
