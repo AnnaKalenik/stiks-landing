@@ -1,10 +1,8 @@
-"use strict"
-
-let head = document.querySelector('.head');
-let headHight = head.offsetHeight;
-
 //Фиксация и анимация меню
 document.onscroll = function () {
+    let head = document.querySelector('.head');
+    let headHight = head.offsetHeight;
+
     let scroll = window.scrollY;
 
     if (scroll > headHight) {
@@ -16,7 +14,7 @@ document.onscroll = function () {
     }
 };
 
-//Меню бургер
+//Меню-бургер
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
 
@@ -28,7 +26,7 @@ if (iconMenu) {
     })
 }
 
-//ФУНКЦИЯ ЗАКРЫТИЯ МЕНЮ ПОСЛЕ КЛИКА ПО ССЫЛКЕ ДЛЯ ДЕКСТОПОВ И МОБИЛЬНЫХ
+//Функция закрытия меню-бургер после клика по пункту меню
 const menuLinks = document.querySelectorAll('.menu__link');
 
 if (menuLinks.length > 0) {
@@ -46,9 +44,9 @@ if (menuLinks.length > 0) {
 }
 
 //Подключение Яндекс-карты
-let center = [53.43695695208052,28.543546389549256];
+function initMap() {
+    let center = [53.43695695208052,28.543546389549256];
 
-function init() {
     let map = new ymaps.Map("map", {
         center: center,
         zoom: 16
@@ -59,4 +57,4 @@ function init() {
     map.geoObjects.add(placemark);
 }
 
-ymaps.ready(init);
+ymaps.ready(initMap);
