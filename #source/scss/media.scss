@@ -1,8 +1,19 @@
+@media (max-width: 1401px) {
+    .head {
+        background-image: none;
+    }
+
+    .promo {
+        background-position-y: 0;
+    }
+}
+
 
 @media (max-width: 1337px) {
     .promo {
         &__item {
             flex: 0 0 40%;
+
             &_first {
                 margin-right: 100px;
             }
@@ -134,11 +145,7 @@
         a {
             font-size: 18px;
         }
-    }
-
-    .promo {
-        background-position-y: 0px;
-    }   
+    }  
 
     .container {
         width: 90%;

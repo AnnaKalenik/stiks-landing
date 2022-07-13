@@ -1,3 +1,11 @@
+@media (max-width: 1401px) {
+  .head {
+    background-image: none;
+  }
+  .promo {
+    background-position-y: 0;
+  }
+}
 @media (max-width: 1337px) {
   .promo__item {
     -webkit-box-flex: 0;
@@ -123,9 +131,6 @@
   }
   .phone-number a {
     font-size: 18px;
-  }
-  .promo {
-    background-position-y: 0px;
   }
   .container {
     width: 90%;
