@@ -697,20 +697,19 @@ body {
 }
 
 //--------------- footer ---------------
-.footer {   
-    height: 120px;
-    box-shadow: 0 20px 30px  rgb(110, 110, 110);    
+.footer {
+    padding: 30px 0;  
+    box-shadow: 0 20px 30px  rgb(110, 110, 110);
+    
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     &__logo {
         z-index: 1;
-        // &>a {
-        //     font-size: 18px;
-        //     color: #000 !important;
-        //     img {
-        //         width: 40px;
-        //         height: 40px;
-        //     }    
-        // }
     }
 
     &__copyright,
@@ -718,11 +717,4 @@ body {
         @include font-arial;
         line-height: 25px;
     }
-}
-
-.footer .container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
