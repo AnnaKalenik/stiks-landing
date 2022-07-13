@@ -1,9 +1,3 @@
-@media (max-width: 1530px) {
-    .promo {
-        // background-image: url('../../images/promo-bg2.png');
-        // background-position: right; 
-    }
-}
 
 @media (max-width: 1337px) {
     .promo {
@@ -13,20 +7,12 @@
                 margin-right: 100px;
             }
         }
-    }
-    .instruction {
-        &__phone-number {
-            &_second {
-                margin-top: 26px;
-            }
-        }
-    }  
+    } 
 }
 
 @media (max-width: 1300px) {
     .menu {
         &__link {
-            font-size: 18px;
             padding: 0 15px;
         }
     }
@@ -41,6 +27,7 @@
             width: 30px;
             height: 18px;
             cursor: pointer;
+
             span,
             &::before,
             &::after {
@@ -49,47 +36,55 @@
                 width: 100%;
                 height: 10%;
                 transition: all 0.3s ease 0s;
-                background-color: #000;
+                background-color: #ffffff;
             }
+
             &::before,
             &::after {
                 content: "";
             }
+
             &::before {
                 top: 0;
-
             }
+
             &::after {
                 bottom: 0;
             }
+
             span {
                 top: 50%;
                 transform: scale(1) translate(0px, -50%);
             }
+
             &_active {
                 span {
                     transform: scale(0) translate(0px, -50%);
                 }
+
                 &::before {
                     top: 50%;
                     transform: rotate(-45deg) translate(0px, -50%);
                 }
+
                 &::after {
                     bottom: 50%;
                     transform: rotate(45deg) translate(0px, 50%);
                 }
             }
         }
+
         &__body {
             position: fixed;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.952);
+            background-color: #2b4941;
             padding: 100px 0 0 0;
             transition: left 0.3s ease 0s;
             overflow: auto;
+
             &::before {
                 content: "";
                 position: fixed;
@@ -98,29 +93,52 @@
                 left: 0;
                 height: 90px;
                 z-index: 99;
-                background-color: #fff;
+                background-color: #2b4941;
             }
+
             &_active {
                 left: 0;
                 z-index: 2;
             }
         }
+
         &__list {
             display: flex;
             flex-direction: column;
             margin: 100px 0 0 0;
-            &>li {
+
+            & > li {
                 margin-bottom: 40px;
             } 
         }
+
         &__link {
             font-size: 30px;
+
             &:hover {
                 font-size: 35px;
                 font-weight: bold;
             }    
         }
     }
+
+    .phone-number {
+        align-items: center;
+
+        &__icon {
+            width: 40px;
+            height: 40px;
+            margin-left: 20px;
+        }
+
+        a {
+            font-size: 18px;
+        }
+    }
+
+    .promo {
+        background-position-y: 0px;
+    }   
 
     .container {
         width: 90%;
@@ -129,7 +147,6 @@
 
 @media (max-width: 1024px) {
     .promo {
-        background-image: url("../images/promo-bg2-white.png");
         &__item {
             &_first {
                 margin-right: 80px;
@@ -141,29 +158,22 @@
 @media (max-width: 955px) {
     .promo {
         padding: 80px 30px;
-        &__title-top {
-            font-size: 70px;       
-            line-height: 75px;
-            margin-bottom: 20px;
-        }
-        &__title-bottom {
-            font-size: 30px;
-            line-height: 35px;
-            margin-bottom: 80px;
-        }
+
         &__item {
-            flex: 0 0 40%;
+            flex: 0 0 45%;
+
             &_first {
-                margin-right: 80px;
+                margin-right: 60px;
             }
         }
+
         &__title {
-            font-size: 30px;
-            line-height: 35px;
+            font-size: 35px;
+            line-height: 40px;
         }
+
         &__subtitle {
-            font-size: 25px !important;
-            line-height: 35px !important;
+            text-align: left;
         }
     }
 
@@ -177,8 +187,8 @@
     }
     
     .about {
-        &__subtitle {
-            margin: 0 0 80px 0;
+        &__image {
+            width: 280px;
         }
     }
 
@@ -222,68 +232,94 @@
     }
 }
 
-@media (max-width: 819px) {
-    .promo {
-        background-image: url("../images/promo-bg3-white.png");
-    }   
-}
-
 @media (max-width: 768px) {
-    .phone-number {
+    .head {             
         &__phone-number {
-            &::before {
-                width: 35px;
-                height: 32px;
-                left: -50px;
-            }
-            a {
-                font-size: 18px;
-            }
+            display: none;
+            z-index: 0;
         }
     }
+
+    .phone-number {
+        z-index: 0;
+        margin-bottom: 50px;
+
+        &::before {
+            width: 45px;
+            height: 41px;
+            top: 8px;
+        }
+
+        a {
+            font-size: 20px;
+        }
+    }
+
     .logo {
         a {
             font-size: 20px;
+
             img {
                 width: 50px;
                 height: 50px;
             }
         }
     }
+
     .menu {
         &__icon {
             display: block;
         }
     }
+
     .promo {
-        &__title-top {
-            font-size: 60px;       
-            line-height: 65px;
+        padding: 50px 30px;
+
+        &__phone-number {
+            display: flex;
+            z-index: 0;
         }
-        &__title-bottom {
-            font-size: 25px;
-            line-height: 30px;
-            margin-bottom: 30px;
+
+        &__title {
+            font-size: 27px;
+            line-height: 35px;
         }
+
+        &__title2, &__title3 {
+            font-size: 22px;
+            line-height: 25px;
+            letter-spacing: 2px;
+            padding-top: 10px;
+        }
+    
+        &__areas {
+            font-size: 20px;
+            line-height: 27px;
+            margin-bottom: 10px;
+        }
+
         &__info {
             flex-direction: column;
         }
+
         &__item {
             margin-top: 50px;
+
             &_first {
                 margin-right: 0;
             }
         }
-        &__title {
-            font-size: 25px;
-            line-height: 30px;
-        }
-        &__subtitle {
-            font-size: 22px !important;
-            line-height: 32px !important;
-        }
+
         &__button {
             margin: 20px 0 0;
+        }
+    }
+
+    .container {
+        &_flex {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
         }
     }
 
@@ -292,6 +328,26 @@
     }
 
     .about {
+        &__wrapper {
+            margin-left: 0;
+        }
+
+        &__title-2 {
+            text-align-last: center;
+        }
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__button {
+            display: block;
+            margin: 0 auto 60px;
+        }
+    }
+
+    .advantages {
         &__icon {
             width: 100px;
             height: 100px;
@@ -328,14 +384,6 @@
         margin: 15px 0 20px 0;
     }
 
-    // .instruction {
-    //     &__phone-number {
-    //         &_second {
-    //             margin-top: 0;
-    //         }
-    //     }
-    // }
-
     .contacts {
         &__subtitle {
             margin-bottom: 40px;
@@ -346,18 +394,23 @@
             height: 300px;
         }
     }
+
     .footer {   
         height: 300px;
+
         &__time {
             font-size: 20px;
         }
+
         &__information {
             margin-bottom: 20px;
             font-size: 16px;
         }
+
         &__copyright {
             font-size: 16px;
         }
+
         &__logo {
             &>a {
                 font-size: 16px;
@@ -378,32 +431,28 @@
 @media (max-width: 639px) {
     .promo {
         padding: 60px 30px;
-        &__title-top {
-            font-size: 45px;       
-            line-height: 50px;
-        }
-        &__title-bottom {
-            font-size: 25px;
-            line-height: 30px;
-            margin-bottom: 30px;
-        }
+
         &__info {
             flex-direction: column;
         }
+
         &__item {
             margin-top: 50px;
             &_first {
                 margin-right: 0;
             }
         }
+
         &__title {
             font-size: 25px;
             line-height: 30px;
         }
+
         &__subtitle {
             font-size: 22px !important;
             line-height: 32px !important;
         }
+
         &__button {
             margin: 20px 0 0;
         }
@@ -451,32 +500,13 @@
     }
 }
 
-@media (max-width: 580px) {
-    .head {             
-        &__phone-number {
-            display: none;
-            z-index: 0;
+@media (max-width: 559px) {
+    .promo {
+        &__title2,
+        &__title3 {
+            padding-top: 20px;
         }
     }
-    .promo { 
-        &__phone-number {
-            display: flex;
-            z-index: 0;
-        }
-    }
-
-    .phone-number {
-        z-index: 0;
-        margin-bottom: 40px;
-        &::before {
-            width: 45px;
-            height: 41px;
-            top: 8px;
-        }
-        a {
-            font-size: 25px;
-        }
-    }   
 }
 
 @media (max-width: 486px) {
@@ -503,32 +533,27 @@
         margin-bottom: 30px;
     }
 
-    .promo {
-        height: 750px;          
+    .promo {         
         padding: 40px 20px;
-        &__title-top {
-            font-size: 40px;       
-            line-height: 45px;
-        }
-        &__title-bottom {
-            font-size: 23px;
-            line-height: 28px;
-            margin-bottom: 25px;
-        }
+
         &__item {
             margin-top: 30px;
+
             &_first {
                 margin-right: 0;
             }
         }
+
         &__title {
             font-size: 20px;
             line-height: 25px;
         }
+
         &__subtitle {
             font-size: 20px !important;
             line-height: 25px !important;
         }
+
         &__button {
             margin: 15px 0 0;
         }
@@ -566,10 +591,6 @@
     .phone-number {
         margin-bottom: 30px;
     }
-
-    .promo {
-        height: 850px;          
-    }
 }
 
 @media (max-width: 315px) {
@@ -581,18 +602,6 @@
         }
         a {
             font-size: 20px;
-        }
-    }
-
-    .promo {
-        &__title-top {
-            font-size: 33px;       
-            line-height: 38px;
-        }
-        &__title-bottom {
-            font-size: 23px;
-            line-height: 26px;
-            margin-bottom: 20px;
         }
     }
     
@@ -653,10 +662,12 @@
     .promo {
         height: 780px;
         padding: 35px 15px;
+
         &__title-top {
             font-size: 25px;       
             line-height: 30px;
         }
+
         &__title-bottom {
             font-size: 20px;
             line-height: 24px;

@@ -156,6 +156,7 @@ body {
     justify-content: flex-start;
     position: relative;
     z-index: 2;
+
 	&__icon {
         display: block;
         width: 60px;
@@ -165,32 +166,39 @@ body {
         background-size: contain;
         margin-left: 30px;
 	}
+
 	&__items {
         display: flex;
         flex-direction: column;
 	}
+
 	&__item {
         padding-left: 60px;
         background-repeat: no-repeat;
         background-size: 40px 20px;
+
 		&_item1 {
             background-image: url('../assets/svg/icon-header-logo-mts.svg');
             background-position: 0 3px;
 		}
+
 		&_item2 {
             background-image: url('../assets/svg/icon-header-logo-a1.svg');
             background-position: 0 2px;
 		}
 	}
+
     a {
         text-transform: uppercase;
         font-size: 20px;
         font-weight: bold;
         color: #ffffff;
         transition: color 0.4s ease, transform 0.4s ease;
+        
         &:first-child {
             margin-bottom: 10px;
         }
+
         &:hover {
             color: #f3cc93;
             transform: scale(1.05);
@@ -207,6 +215,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 30px;
+
 	&__container {
         height: 100%;
         max-width: 1280px;
@@ -215,10 +224,12 @@ body {
         align-items: center;
         justify-content: flex-start;
 	}
+
     &__phone-number {
         display: none;
         z-index: 0;
     }
+
 	&__title {
         color: #ffc64c;
         font-size: 40px;       
@@ -228,6 +239,7 @@ body {
         text-transform: uppercase;
         margin-bottom: 20px;
 	}
+
 	&__title2, &__title3 {
         font-size: 30px;
         line-height: 35px;
@@ -235,27 +247,30 @@ body {
         text-transform: uppercase;
         padding-top: 10px;
 	}
+
     &__title3 {
         margin-bottom: 20px;
     }
+
 	&__areas {
-        @include font-arial;
-        font-size: 25px;
+        @include font-arial($size: 25px);
         line-height: 35px;
         margin-bottom: 80px;
         span {
             color: #feeabe;
         }
 	}
+
 	&__info {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
 	}
+
 	&__item {
         display: flex;
         flex-direction: column;
-        align-items:flex-start;
+        align-items: flex-start;
         justify-content: space-between;
         @include font-arial($size: 25px);
         line-height: 30px;
@@ -264,14 +279,17 @@ body {
             margin-right: 150px;
 		}
 	}
+
 	&__description {
         span {
             color: #ff1d1d;
         }
 	}
+
 	&__button {
         margin-top: 45px;
 	}
+
 	&__title-info {
         margin-bottom: 10px;
 	}
@@ -281,11 +299,11 @@ body {
     width: 80%;
     max-width: 1280px;
     margin: 0 auto;
-}
 
-.container__flex {
-    display: flex;
-    align-items: center;
+    &_flex {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .subtitle {
