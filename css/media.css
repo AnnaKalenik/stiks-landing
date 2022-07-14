@@ -107,7 +107,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 100px 0 0 0;
+    margin: 60px 0 0 0;
   }
   .menu__list > li {
     margin-bottom: 40px;
@@ -505,6 +505,10 @@
   .promo__title {
     font-size: 20px;
     line-height: 25px;
+  }
+  .promo__title2, .promo__title3 {
+    font-size: 18px;
+    line-height: 23px;
   }
   .promo__subtitle {
     font-size: 20px !important;
