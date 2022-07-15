@@ -24,7 +24,7 @@ const menuLinks = document.querySelectorAll('.menu__link');
 
 //Открытие меню при нажатии на иконку
 if (iconMenu) {
-    iconMenu.addEventListener("click", function(e) {
+    iconMenu.addEventListener('click', function(e) {
         document.body.classList.toggle('body_lock');
         iconMenu.classList.toggle('menu__icon_active');
         menuBody.classList.toggle('menu__body_active');
@@ -34,7 +34,7 @@ if (iconMenu) {
 //Функция закрытия меню-бургер после клика по пункту меню
 if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
-        menuLink.addEventListener("click", onMenuLinkClick);
+        menuLink.addEventListener('click', onMenuLinkClick);
     });
 
     function onMenuLinkClick(e) {
@@ -45,6 +45,47 @@ if (menuLinks.length > 0) {
         }
     }
 }
+
+/*
+* POP-UP
+*/
+function modalWIndow () {
+    let bodyStyle = document.body.style;
+    const modal = document.querySelector('#modal');
+    const darkLayer = document.querySelector('#modal-dark-layer');
+    const btnClose = document.querySelector('#modal-btn-close');
+    let modalImage = document.querySelector('.modal-window__image');
+    const imgArr = document.querySelectorAll('#gallery-img');
+
+    const addImageOnClick = () => {
+        let dataImage = event.target.dataset.image;
+        modalImage.src = `./assets/images/gallery-${dataImage}.jpg`;
+    }
+
+    const fixationScroll = () => {
+        bodyStyle.overflow === 'hidden' ? bodyStyle.overflow = 'visible' : bodyStyle.overflow = 'hidden';
+    }
+
+    const openModalWindow = (event) => {
+        modal.style.display = 'flex';
+        addImageOnClick();
+        fixationScroll();
+    }
+
+    const closeModalWindow = () => {
+        modal.style.display = 'none';
+        fixationScroll();
+    }
+
+    imgArr.forEach(item => {
+        item.addEventListener('click', openModalWindow);
+    })
+
+    darkLayer.addEventListener('click', closeModalWindow);
+    btnClose.addEventListener('click', closeModalWindow);
+}
+
+modalWIndow();
 
 /*
 * ПОДКЛЮЧЕНИЕ ЯНДЕКС-КАРТ

@@ -43,6 +43,8 @@ html {
 }
 
 body {
+    position: relative;
+    overflow: visible;
     font: 400 18px 'Georgia', 'Times New Roman', 'Times', serif;
     color: #2b3230;
 }
@@ -345,6 +347,7 @@ body {
     border-radius: 100px;
     padding: 20px 50px;
     transition: all 0.5s ease;
+
     &:hover {
         background-color: #f4d9b2;
     }
@@ -614,7 +617,13 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        cursor: pointer;
+        transition: all 0.5s ease;
 
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: 0 6px 20px -2px rgb(87, 87, 87);    
+        }
 
         &_image1 {
             grid-column-start: 1;
@@ -823,5 +832,77 @@ body {
     &__information {
         @include font-arial;
         line-height: 25px;
+    }
+}
+
+//--------------- modal-window ---------------
+
+.modal-window {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    &__dark-layer {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0000009f;
+        z-index: 101;
+        cursor: pointer;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: auto;
+        height: auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px 20px;
+        z-index: 102;
+    }
+
+    &__btn-close {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: absolute;
+        top: -30px;
+        right: -60px;
+        width: 40px;
+        height: 40px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        &:hover {
+            background-color: #f4d9b2;
+        }
+    }
+
+    // &__content {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     width: 100%;
+    //     height: 100%;
+    // }
+
+    &__image {
+        max-height: 75vh;
+        min-height: 50vh;
+        max-width: 80vw;
     }
 }

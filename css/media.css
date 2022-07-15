@@ -21,9 +21,14 @@
     padding: 0 15px;
   }
 }
+@media (max-width: 1282px) {
+  .modal-window__image {
+    min-height: 40px;
+  }
+}
 @media (max-width: 1170px) {
   .menu__icon {
-    z-index: 9999;
+    z-index: 999;
     display: block;
     position: relative;
     width: 30px;
@@ -136,6 +141,11 @@
     width: 90%;
   }
 }
+@media (max-width: 1082px) {
+  .modal-window__image {
+    min-height: 0;
+  }
+}
 @media (max-width: 1024px) {
   .promo__item_first {
     margin-right: 80px;
@@ -211,6 +221,11 @@
   }
   .shop__image {
     width: 50%;
+  }
+}
+@media (max-width: 930px) {
+  .modal-window__image {
+    max-width: 75vw;
   }
 }
 @media (max-width: 768px) {
@@ -328,6 +343,65 @@
     font-size: 20px;
     line-height: 25px;
   }
+  .samples__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr 0.3fr 0.5fr 0.5fr 0.1fr;
+    grid-gap: 15px;
+  }
+  .samples__image_image1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .samples__image_image2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+  }
+  .samples__image_image3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .samples__image_image4 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .samples__image_image5 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .samples__image_image6 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+  .samples__image_image7 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .samples__image_image8 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .samples__image_image9 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
   .contacts__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -355,6 +429,15 @@
   }
   .footer__logo, .footer__copyright {
     margin-bottom: 30px;
+  }
+  .modal-window__wrapper {
+    padding: 10px 10px;
+  }
+  .modal-window__btn-close {
+    display: none;
+  }
+  .modal-window__image {
+    max-width: 90vw;
   }
 }
 @media (max-width: 700px) {
@@ -454,6 +537,9 @@
   .promo__title2, .promo__title3 {
     padding-top: 20px;
   }
+  .modal-window__image {
+    max-width: 85vw;
+  }
 }
 @media (max-width: 486px) {
   .services__list {
@@ -484,6 +570,65 @@
   .logo__title span {
     font-size: 18px;
     line-height: 23px;
+  }
+  .samples__gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr 0.3fr 0.5fr 0.5fr 0.1fr 0.3fr 0.5fr;
+    grid-gap: 10px;
+  }
+  .samples__image_image1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .samples__image_image2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 8;
+  }
+  .samples__image_image3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+  .samples__image_image4 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .samples__image_image5 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .samples__image_image6 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+  .samples__image_image7 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .samples__image_image8 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  .samples__image_image9 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 }
 @media (max-width: 412px) {
@@ -554,13 +699,14 @@
   .contacts__phone-number {
     font-size: 18px;
   }
+  .modal-window__image {
+    max-width: 80vw;
+  }
 }
 @media (max-width: 359px) {
   .phone-number {
     margin-bottom: 30px;
   }
-}
-@media (max-width: 359px) and (max-width: 396px) {
   .footer__logo {
     margin-left: 20%;
   }

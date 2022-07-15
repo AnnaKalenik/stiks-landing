@@ -96,6 +96,8 @@ html {
 }
 
 body {
+  position: relative;
+  overflow: visible;
   font: 400 18px "Georgia", "Times New Roman", "Times", serif;
   color: #2b3230;
 }
@@ -718,6 +720,17 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.samples__image:hover {
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-box-shadow: 0 6px 20px -2px rgb(87, 87, 87);
+          box-shadow: 0 6px 20px -2px rgb(87, 87, 87);
 }
 .samples__image_image1 {
   grid-column-start: 1;
@@ -922,4 +935,73 @@ body {
 .footer__copyright, .footer__information {
   font: 400 18px "Arial", sans-serif;
   line-height: 25px;
+}
+
+.modal-window {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.modal-window__dark-layer {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6235294118);
+  z-index: 101;
+  cursor: pointer;
+}
+.modal-window__wrapper {
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 20px;
+  z-index: 102;
+}
+.modal-window__btn-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  top: -30px;
+  right: -60px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.modal-window__btn-close:hover {
+  background-color: #f4d9b2;
+}
+.modal-window__image {
+  max-height: 75vh;
+  min-height: 50vh;
+  max-width: 80vw;
 }
