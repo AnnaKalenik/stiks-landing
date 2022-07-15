@@ -79,10 +79,13 @@ function modalWIndow () {
 
     imgArr.forEach(item => {
         item.addEventListener('click', openModalWindow);
+        item.addEventListener('pointerdown', closeModalWindow);
     })
 
     darkLayer.addEventListener('click', closeModalWindow);
+    darkLayer.addEventListener('pointerdown', closeModalWindow);
     btnClose.addEventListener('click', closeModalWindow);
+    btnClose.addEventListener('pointerdown', closeModalWindow);
 }
 
 modalWIndow();
