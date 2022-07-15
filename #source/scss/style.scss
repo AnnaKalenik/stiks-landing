@@ -282,7 +282,31 @@ body {
 
 	&__description {
         span {
-            color: #ff1d1d;
+            font-size: 30px;
+            text-shadow: #000000 0 0 8px;
+            animation: flicker 2s infinite linear;
+        }
+
+        @keyframes flicker {
+            0% {
+                color: #ffd11a;
+            }
+
+            25% {
+                color: #f7ff1a;
+            }
+
+            50% {
+                color: #3cff1a;
+            }
+
+            75% {
+                color: #26fde1;
+            }
+
+            100% {
+                color: #fd2626;
+            }
         }
 	}
 
@@ -347,11 +371,6 @@ body {
         margin: 0 0 1.5rem 0;
         line-height: 1.7rem;
     }
-
-    &__button {
-        background-color: transparent;
-        border: 2px solid #f4d9b2;
-    }
 }
 
 .section {
@@ -369,7 +388,7 @@ body {
 //--------------- advantages ---------------
 
 .advantages {
-    background-color: #fdfbf6;
+    background-color: #fffaee;
     &__icon {
         width: 128px;
         height: 128px;
@@ -501,7 +520,7 @@ body {
 
 //--------------- shop ---------------
 .shop {
-    background-color: #fdfbf6;
+    background-color: #fffaee;
     
     &__body {
         display: grid;
@@ -664,7 +683,7 @@ body {
 
 //--------------- contacts ---------------
 .contacts {
-    background-color: #fdfbf6;
+    background-color: #fffaee;
     &__subtitle {
         margin-bottom: 50px;
     }

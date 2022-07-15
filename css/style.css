@@ -372,7 +372,44 @@ body {
   margin-right: 150px;
 }
 .promo__description span {
-  color: #ff1d1d;
+  font-size: 30px;
+  text-shadow: #000000 0 0 8px;
+  -webkit-animation: flicker 2s infinite linear;
+          animation: flicker 2s infinite linear;
+}
+@-webkit-keyframes flicker {
+  0% {
+    color: #ffd11a;
+  }
+  25% {
+    color: #f7ff1a;
+  }
+  50% {
+    color: #3cff1a;
+  }
+  75% {
+    color: #26fde1;
+  }
+  100% {
+    color: #fd2626;
+  }
+}
+@keyframes flicker {
+  0% {
+    color: #ffd11a;
+  }
+  25% {
+    color: #f7ff1a;
+  }
+  50% {
+    color: #3cff1a;
+  }
+  75% {
+    color: #26fde1;
+  }
+  100% {
+    color: #fd2626;
+  }
 }
 .promo__button {
   margin-top: 45px;
@@ -434,10 +471,6 @@ body {
   margin: 0 0 1.5rem 0;
   line-height: 1.7rem;
 }
-.about__button {
-  background-color: transparent;
-  border: 2px solid #f4d9b2;
-}
 
 .section {
   padding: 120px 0;
@@ -452,7 +485,7 @@ body {
 }
 
 .advantages {
-  background-color: #fdfbf6;
+  background-color: #fffaee;
 }
 .advantages__icon {
   width: 128px;
@@ -583,7 +616,7 @@ body {
 }
 
 .shop {
-  background-color: #fdfbf6;
+  background-color: #fffaee;
 }
 .shop__body {
   display: grid;
@@ -742,7 +775,7 @@ body {
 }
 
 .contacts {
-  background-color: #fdfbf6;
+  background-color: #fffaee;
 }
 .contacts__subtitle {
   margin-bottom: 50px;
