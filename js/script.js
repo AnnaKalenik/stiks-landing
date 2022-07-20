@@ -79,9 +79,7 @@ function modalWIndow () {
     })
 
     darkLayer.addEventListener('click', closeModalWindow);
-    // darkLayer.addEventListener('touchstart', closeModalWindow);
     btnClose.addEventListener('click', closeModalWindow);
-
 }
 
 modalWIndow();
