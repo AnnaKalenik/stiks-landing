@@ -62,30 +62,26 @@ function modalWIndow () {
         modalImage.src = `./assets/images/gallery-${dataImage}.jpg`;
     }
 
-    const fixationScroll = () => {
-        bodyStyle.overflow === 'hidden' ? bodyStyle.overflow = 'visible' : bodyStyle.overflow = 'hidden';
-    }
-
     const openModalWindow = (event) => {
         modal.style.display = 'flex';
+        bodyStyle.overflow = 'hidden'
         addImageOnClick();
-        fixationScroll();
     }
 
     const closeModalWindow = () => {
         modal.style.display = 'none';
-        fixationScroll();
+        bodyStyle.overflow = 'visible'
     }
 
     imgArr.forEach(item => {
         item.addEventListener('click', openModalWindow);
-        item.addEventListener('pointerdown', closeModalWindow);
+        item.addEventListener('touchstart', closeModalWindow);
     })
 
     darkLayer.addEventListener('click', closeModalWindow);
-    darkLayer.addEventListener('pointerdown', closeModalWindow);
+    // darkLayer.addEventListener('touchstart', closeModalWindow);
     btnClose.addEventListener('click', closeModalWindow);
-    btnClose.addEventListener('pointerdown', closeModalWindow);
+
 }
 
 modalWIndow();
